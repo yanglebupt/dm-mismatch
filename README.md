@@ -14,11 +14,11 @@ $$
 $$
 
 $$
-Pre-Measure(PM):  A_{recv1} = F(A_0, y_0, y_1; Speckle\_Measure(A, PM))
+Pre-Measure(PM):  A_{recv1} = F(A_0, y_0, y_1; Speckle_{Measure}(A, PM))
 $$
 
 $$
-A_{recv} = A_{recv1} + F(A_0, y_0, y_2-Speckle\_Measure(A_{recv1}, x);  Speckle\_Measure(A, x)) \\ \\
+A_{recv} = A_{recv1} + F(A_0, y_0, y_2-Speckle_{Measure}(A_{recv1}, x);  Speckle_{Measure}(A, x)) \\ \\
 $$
 
 $$
