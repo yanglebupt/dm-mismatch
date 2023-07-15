@@ -34,10 +34,14 @@ $$
 y_{2} = A_{2} x 
 $$
 
-In order to s.t.$y_{2} = A_{recv} x$ we can solve the general solution
+We can solve the general solution
 
 $$
 A_{recv} = \frac{1}{y_1^T\Sigma y_1} y_2 y_1^T\Sigma A_1
+$$
+
+$$
+s.t. y_{2} = A_{recv} x
 $$
 
 Let's take one of the special solutions
