@@ -174,6 +174,10 @@ Different displacement MMF measurement matrixs at https://drive.google.com/drive
 
 ## Pretrained Checkpoints
 
+Link: https://drive.google.com/drive/folders/1217uhIvLg9ZrYNKOR3XTRFSurt4miQrd?usp=sharing
+
+These checkpoint files are provided as-is from the authors of [NCSNv2](https://github.com/ermongroup/ncsnv2). We just use the **LSUN-tower datasets' pretrained checkpoints**. We assume the `--exp` argument is set to `exp`. Download and place into `<exp:exp>/logs/<doc:0>/tower` folder.
+
 ## Acknowledgement
 
 This repo is largely based on the [NCSNv2](https://github.com/ermongroup/ncsnv2) repo, and uses code from [SNIPS](https://github.com/bahjat-kawar/snips_torch/blob/main/models/__init__.py) for implementing the SNIPS's general_anneal_Langevin_dynamics sample which includes a singular value decomposition (SVD) of the degradation operator.
