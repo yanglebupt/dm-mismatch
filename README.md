@@ -4,9 +4,13 @@ This repo contains the official implementation for the paper XXXX.
 
 by Le Yang (2019212184@bupt.edu.cn).
 
+## Abstract
+
+## Method
+
 ## Running Experiments
 
-### Dependencies
+### Environment
 We use the code experiment environment conditions as shown in the following list:
 
 - PyTorch  1.11.0
@@ -14,13 +18,13 @@ We use the code experiment environment conditions as shown in the following list
 - Cuda  11.3
 - RTX 2080 Ti (11GB) * 1
 
-Run the following line to install all necessary python packages for our code.
+### Dependencies
+
+You can install whatever python packages you find missing when running code, or just run the following command in the terminal.
 
 ```bash
 pip install -r requirements.txt
 ```
-
-Or install whatever python packages you find missing when running code.
 
 ### Project structure
 
@@ -164,6 +168,11 @@ def sample(self):
     print(measure_rate)
     get_measure_matrix = get_gussian_measure_matrix  # to change different measure_matrix
 ```
+
+## Data availability
+Different displacement MMF measurement matrixs at https://drive.google.com/drive/folders/1_RlwkPU6pSR6FRqWL7TT7ovwtphenpcy?usp=drive_link. Download and place into `cs_image/mmf_displacement` folder.
+
+## Pretrained Checkpoints
 
 ## Acknowledgement
 
