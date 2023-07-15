@@ -25,6 +25,16 @@ $$
 x'=G(y_2, A_{recv})
 $$
 
+- **F** is a *Iterative algorithm for solving Mismatch problem* proposed by us, which can described as following:
+  $$
+  y_1 = A_1 x \\
+    y_2 = A_2 x 
+  $$
+  $$ 
+  y_2 = A_2 x 
+  $$
+- **G** can be any compressed sensing reconstruction algorithm, such as **OMP** 、**GPSR** (You can access [dm-mismatch-results](https://github.com/yanglebupt/dm-mismatch-results) repo to obtain the more visualization results and code) and **Diffusion Model** which used by us in here.
+
 ## Running Experiments
 
 ### Environment
