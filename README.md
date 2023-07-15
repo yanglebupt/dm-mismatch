@@ -27,8 +27,7 @@ $$
 
 - **F** is a *Iterative algorithm for solving Mismatch problem* proposed by us, which can described as following:
   $$
-  y_1 = A_1 x \\
-    y_2 = A_2 x 
+  y_1 = A_1 x
   $$
   $$ 
   y_2 = A_2 x 
