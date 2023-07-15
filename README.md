@@ -9,7 +9,7 @@ by Le Yang (2019212184@bupt.edu.cn).
 ## Method
 The proposed method uses $A_0$ (mmf 0 displacement known measurement matrix) and $A_{25}$ (mmf 25 displacement unknown measurement matrix) **Pre-Measure (PM)** image  separately to obtain $y_0$ and $y_1$. Use unknown measurement matrix $A_{25}$ measure unknown image $x$ to obtain $y_2$. Use the following algorithm to reconstruct the original image
 
-![]([http://some_place.com/image.png](https://latex.codecogs.com/svg.image?\arg\min\limits_{A_{recv}}||y_2-A_{recv}x||_2^2\\\\Pre-Measure(PM):A_{recv1}=F(A_0,y_0,y_1;Speckle\_Measure(A,PM))\\\\A_{recv}=A_{recv1}&plus;F(A_0,y_0,y_2-Speckle\_Measure(A_{recv1},x);Speckle\_Measure(A,x))\\\\x'=G(y_2,A_{recv}))](https://latex.codecogs.com/svg.image?\arg\min\limits_{A_{recv}}||y_2-A_{recv}x||_2^2\\\\Pre-Measure(PM):A_{recv1}=F(A_0,y_0,y_1;Speckle\_Measure(A,PM))\\\\A_{recv}=A_{recv1}&plus;F(A_0,y_0,y_2-Speckle\_Measure(A_{recv1},x);Speckle\_Measure(A,x))\\\\x'=G(y_2,A_{recv})))
+![](https://latex.codecogs.com/svg.image?\arg\min\limits_{A_{recv}}||y_2-A_{recv}x||_2^2\\\\Pre-Measure(PM):A_{recv1}=F(A_0,y_0,y_1;Speckle\_Measure(A,PM))\\\\A_{recv}=A_{recv1}&plus;F(A_0,y_0,y_2-Speckle\_Measure(A_{recv1},x);Speckle\_Measure(A,x))\\\\x'=G(y_2,A_{recv}))
 
 ## Running Experiments
 
