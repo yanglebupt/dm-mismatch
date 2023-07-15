@@ -7,25 +7,17 @@ by Le Yang (2019212184@bupt.edu.cn).
 ## Abstract
 
 ## Method
-The proposed method uses $A_0$ (mmf 0 displacement known measurement matrix) and $A_{25}$ (mmf 25 displacement unknown measurement matrix) **Pre-Measure (PM)** image  separately to obtain $y_0$ and $y_1$. Use unknown measurement matrix $A_{25}$ measure unknown image $x$ to obtain $y_2$. Use the following algorithm to reconstruct the original image
+The proposed method uses $A$ (mmf 0 displacement known measurement matrix) and $A_{25}$ (mmf 25 displacement unknown measurement matrix) **Pre-Measure (PM)** image  separately to obtain $y_0$ and $y$. Use unknown measurement matrix $A_{25}$ measure unknown image $x$ to obtain $y_2$. Use the following algorithm to reconstruct the original image
 
-$$
-\arg\min\limits_{A_{recv}} ||y_2 - A_{recv}x||_2^2
-$$
-
-$$
-Pre-Measure(PM):  A_{recv1} = F(A_0, y_0, y_1; Speckle-Measure(A, PM))
-$$
-
-$$
-A_{recv} = A_{recv1} + F(A_0, y_0, y_2-Speckle-Measure(A_{recv1}, x);  Speckle-Measure(A, x)) \\ \\
-$$
-
-$$
-x'=G(y_2, A_{recv})
-$$
+<p align=center>
+    <img src="./assets/min.png" />
+</p>
 
 **F** is a ***Iterative algorithm for solving Mismatch problem*** proposed by us, which can described as following:
+
+<p align=center>
+    <img src="./assets/alg.png" />
+</p>
 
 **G** can be any compressed sensing reconstruction algorithm, such as **OMP** 、**GPSR** (You can access [dm-mismatch-results](https://github.com/yanglebupt/dm-mismatch-results) repo to obtain the more visualization results and code) and **Diffusion Model** which used by us in here.
 
