@@ -32,7 +32,12 @@ $$
 $$ 
 y_{2} = A_{2} x 
 $$
-- **G** can be any compressed sensing reconstruction algorithm, such as **OMP** 、**GPSR** (You can access [dm-mismatch-results](https://github.com/yanglebupt/dm-mismatch-results) repo to obtain the more visualization results and code) and **Diffusion Model** which used by us in here.
+
+and we can solve 
+$$
+A_{recv} = \frac{1}{y_1^T\Sigma y_1}\;y_2\;y_1^T\Sigma A_1 \;\; s.t. y_{2} = A_{recv} x 
+$$
+**G** can be any compressed sensing reconstruction algorithm, such as **OMP** 、**GPSR** (You can access [dm-mismatch-results](https://github.com/yanglebupt/dm-mismatch-results) repo to obtain the more visualization results and code) and **Diffusion Model** which used by us in here.
 
 ## Running Experiments
 
