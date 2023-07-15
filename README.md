@@ -34,7 +34,7 @@ $$
 y_{2} = A_{2} x 
 $$
 
-So we can solve the general solution, $s.t. y_{2} = A_{recv} x$
+So s.t.$y_{2} = A_{recv} x$ we can solve the general solution
 
 $$
 A_{recv} = \frac{1}{y_1^T\Sigma y_1} y_2 y_1^T\Sigma A_1
