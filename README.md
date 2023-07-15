@@ -168,7 +168,7 @@ def sample(self):
 
 ## Pretrained Checkpoints
 
-Link: https://drive.google.com/drive/folders/1217uhIvLg9ZrYNKOR3XTRFSurt4miQrd?usp=sharing
+Link: [https://drive.google.com/drive/folders/1217uhIvLg9ZrYNKOR3XTRFSurt4miQrd?usp=sharing](https://drive.google.com/drive/folders/1_RlwkPU6pSR6FRqWL7TT7ovwtphenpcy?usp=drive_link)
 
 These checkpoint files are provided as-is from the authors of [NCSNv2](https://github.com/ermongroup/ncsnv2). We just use the LSUN-tower datasets' pretrained checkpoints. We assume the `--exp` argument is set to `exp`.
 
