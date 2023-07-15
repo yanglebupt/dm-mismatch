@@ -2,19 +2,19 @@
 
 This repo contains the official implementation for the paper XXXX.
 
-by Le Yang.
+by Le Yang (2019212184@bupt.edu.cn).
 
 ## Running Experiments
 
 ### Dependencies
-We used the code experiment environment conditions as shown in the following list:
+We use the code experiment environment conditions as shown in the following list:
 
 - PyTorch  1.11.0
 - Python  3.8 (ubuntu20.04)
 - Cuda  11.3
 - RTX 2080 Ti (11GB) * 1
 
-Run the following line to install all necessary python packages for our code and set up the snips environment.
+Run the following line to install all necessary python packages for our code.
 
 ```bash
 pip install -r requirements.txt
@@ -62,20 +62,20 @@ Configuration files are in `config/`. You don't need to include the prefix `conf
 ├── logs # contains checkpoints and samples produced during training
 │   └── <doc> # a folder named by the argument `--doc` specified to main.py
 │       └── tower 
-│          └── checkpoint_x.pth # the checkpoint file saved at the x-th training iteration
+│          └── checkpoint_x.pth # download from google drive, the checkpoint file saved at the x-th training iteration
 ├── image_samples # contains generated samples
 │   └── <i>
-│       ├── <PMx>_<Name>_Mismatch_Recv.png # Reconstruction image used PMx (Pre-Measure) image to solve A_recv for compressive sensing with MMF measurement matrix
-│       ├── <Name>_origin.png # Original Image for compressive sensing with MMF measurement matrix
+│       ├── <PMx>_<Name>_Mismatch_Recv.png # Reconstruction image uses PMx (Pre-Measure) image to solve Mismatch A_recv for compressive sensing with MMF measurement matrix
+│       ├── <Name>_origin.png # Original image for compressive sensing with MMF measurement matrix
 ```
 
-Content about Compressed sensing is in `cs_image/`. It includes the solution of mismatch problems for compressive sensing, multimode fiber speckle measurement matrix, and images from outside LSUN/tower dataset. They are structured as:
+code about compressed sensing is in `cs_image/`. It includes the solution of mismatch problems for compressive sensing, multimode fiber speckle measurement matrix, and images from outside LSUN/tower dataset. They are structured as:
 
 ```bash
 cs_image 
 ├── __init__.py       # Mismatch Problem Solve
 ├── measure_matrix.py # deterministic and random measurement matrix for compressive sensing
-├── mmf_displacement  # measurement matrix composed of speckle patterns obtained from multimode fibers (MMF) with different displacements.  
+├── mmf_displacement  # download from google drive, measurement matrix composed of speckle patterns obtained from multimode fibers (MMF) with different displacements.  
 │   ├── 0
 │   │   ├── A_500_256_1.mat  # mmf speckle measurement matrix
 │   │   ├── GI_x0y0.mat      # GI Original Image
@@ -103,7 +103,7 @@ cs_image
     └── Peppers.bmp
 ```
 
-And we modify `runners/ncsn_runner.py` to apply our method and store results into files, which in `../../autodl-tmp/` folder. You can access []() repo to obtain the more visualization results and code. We also implemented **OPM** and **GPSR** algorithms using Pytorch as a comparison with Diffusion Model in that repo. 
+And we modify `runners/ncsn_runner.py` to apply our method and store results into files, which in `../../autodl-tmp/` folder. You can access [dm-mismatch-results](https://github.com/yanglebupt/dm-mismatch-results) repo to obtain the more visualization results and code. We also implemented **OPM** and **GPSR** algorithms using Pytorch as a comparison with Diffusion Model in that repo. 
 
 ### Running
 
@@ -165,16 +165,9 @@ def sample(self):
     get_measure_matrix = get_gussian_measure_matrix  # to change different measure_matrix
 ```
 
-
-## Pretrained Checkpoints
-
-Link: [https://drive.google.com/drive/folders/1217uhIvLg9ZrYNKOR3XTRFSurt4miQrd?usp=sharing](https://drive.google.com/drive/folders/1_RlwkPU6pSR6FRqWL7TT7ovwtphenpcy?usp=drive_link)
-
-These checkpoint files are provided as-is from the authors of [NCSNv2](https://github.com/ermongroup/ncsnv2). We just use the LSUN-tower datasets' pretrained checkpoints. We assume the `--exp` argument is set to `exp`.
-
 ## Acknowledgement
 
-This repo is largely based on the [NCSNv2](https://github.com/ermongroup/ncsnv2) repo, and uses modified code from [SNIPS](https://github.com/bahjat-kawar/snips_torch/blob/main/models/__init__.py) for implementing the SNIPS's general_anneal_Langevin_dynamics sample which includes a singular value decomposition (SVD) of the degradation operator.
+This repo is largely based on the [NCSNv2](https://github.com/ermongroup/ncsnv2) repo, and uses code from [SNIPS](https://github.com/bahjat-kawar/snips_torch/blob/main/models/__init__.py) for implementing the SNIPS's general_anneal_Langevin_dynamics sample which includes a singular value decomposition (SVD) of the degradation operator.
 
 ## References
 
